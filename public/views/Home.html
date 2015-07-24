@@ -1,0 +1,10 @@
+<div ng-controller="HomeController as vm">
+	<h1>{{vm.title}}</h1>
+	<button class="btn btn-primary" ui-sref="add">Add</button>
+	<div ng-repeat="blog in vm.diplayBlog.blog">
+		<h1>Title: {{title}}</h1>
+		<p>Post: {{post}}</p>
+		<button class="btn btn-danger" ng-click="vm.deleteBlog(blog)">Delete</button>
+		<button class="btn btn-default">Edit</button>
+	</div>
+</div>

@@ -1,0 +1,12 @@
+<div ng-controller="addBlogController as vm">
+	<form ng-submit"vm.addBlog()">
+		<h5>Add image</h5>
+		<input type="file" class="form-control" id="chooseFile" data-bfi-disabled>
+		<input type="text" class="form-control" id="blogTitle" placeholder="Blog title" />
+		<div id="blogBody">
+			<textarea type="text" class="btn btn-default" id="blogTextArea"></textarea>
+
+			<button class="btn btn-primary" id="blogSubmitButton">Submit</button>
+		</div>
+	</form>
+</div>
