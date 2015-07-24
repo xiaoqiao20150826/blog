@@ -21,10 +21,10 @@ app.set('view options', {
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-var blogExpress = require('./routing/roues.js');
+var blogExpress = require('./routing/routes.js');
 app.use('/api', blogExpress);
 //on homepage load, render the index page
-app.get/('/', function(req, res) {
+app.get('/', function(req, res) {
 	res.render('index');
 });
 var server = app.listen(port, function() {
