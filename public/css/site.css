@@ -36,6 +36,10 @@ h5 {
 
 h1 {
 	text-align: center;
+	font-family: pacifico;
+}
+
+h2 {
 }
 
 legend {
@@ -43,11 +47,19 @@ legend {
 	font-family: pacifico;
 	font-size: 35px;
 	padding: 30px;
-	background-image: url('background.png');
+	background-color: #04519b;
 	background-size: cover; 
 	color: white;
 }
 
 body {
-	background-color: green;
+	background-color: white;
+}
+
+#blogPost {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: justify;
+	margin-top: 30px;
 }

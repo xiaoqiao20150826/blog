@@ -1,36 +1,22 @@
-<!-- 
-
-<h5>Add image</h5>
-<input type="file" class="form-control" id="chooseFile" data-bfi-disabled>
-<input type="text" class="form-control" id="blogTitle" placeholder="Blog title" />
-<div id="blogBody">
-	<textarea type="text" class="btn btn-default" id="blogTextArea"></textarea>
-
-
-</div> -->
-
 <div ng-controller="addBlogController as vm">
-	<form class="form-horizontal" ng-submit"vm.addBlog()">
+	<form class="form-horizontal" ng-submit="vm.addBlog()">
 		<fieldset>
 			<legend>New blog post</legend>
-
 			<div class="form-group">
 				<label for="blogTitle" class="col-lg-2 control-label">Title</label>
 				<div class="col-lg-10">
-					<input type="text" class="form-control" id="blogTitle" placeholder="Blog title">
+					<input type="text" class="form-control" id="blogTitle" placeholder="Blog title" ng-model="vm.blog_object.blogTitle">
 				</div>
 			</div>
-
 			<div class="form-group">
 				<label for="blogTextArea" class="col-lg-2 control-label">Textarea</label>
 				<div class="col-lg-10">
-					<textarea class="form-control" rows="3" id="blogTextArea"></textarea>
+					<textarea class="form-control" rows="3" id="blogTextArea" ng-model="vm.blog_object.blogTextArea"></textarea>
 				</div>
 			</div>
-
 			<div class="form-group">
 				<div class="col-lg-10 col-lg-offset-2">
-					<button type="reset" class="btn btn-default">Cancel</button>
+					<button type="reset" class="btn btn-default" ng-click="vm.goHome()">Cancel</button>
 					<button type="submit" class="btn btn-info" id="blogSubmitButton">Submit</button>
 				</div>
 			</div>

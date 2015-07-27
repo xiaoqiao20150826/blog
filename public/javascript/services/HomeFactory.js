@@ -9,15 +9,16 @@
 		var o = {};
 		
 		o.listBlog = {};
-		o.addNewBlog = addNewBlog;
 		o.displayBlog = displayBlog;
-		// o.editBlog = editBlog;
-		// o.deleteBlog = deleteBlog;
-
+		o.addNewBlog = addNewBlog;
+		o.editBlog = editBlog;
+		o.deleteBlog = deleteBlog;
+		o.displayBlog();
 		return o;
 
 		function displayBlog (res) {			
-			$http.post('/api/').success(function(res){
+			$http.get('/api/').success(function(res){
+				o.listBlog.blog = res;
 			});
 		}
 
@@ -29,21 +30,21 @@
 			return q.promise;
 		}
 
-		// function editBlog (newBlog) {
-		// 	var q = $q.defer();
-		// 	$http.post('/api/blog', newBlog).success(function(res){
-		// 		q.resolve();
-		// 	});
-		// 	return q.promise;
-		// }
+		function editBlog (newBlog, id) {
+			var q = $q.defer();
+			$http.put('/api/blog/' + id, newBlog).success(function(data){
+				q.resolve(data);
+			});
+			return q.promise;
+		}
 
-		// function deleteBlog (newBlog) {
-		// 	var q = $q.defer();
-		// 	$http.post('/api/blog', newBlog).success(function(res){
-		// 		q.resolve();
-		// 	});
-		// 	return q.promise;
-		// }
+		function deleteBlog (newBlog) {
+			var q = $q.defer();
+			$http.delete('/api/blog/' + newBlog.id).success(function(res){
+				q.resolve();
+			});
+			return q.promise;
+		}
 
 	}
 })();

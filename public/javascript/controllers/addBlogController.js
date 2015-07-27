@@ -10,12 +10,19 @@
 		vm.blog_object = {};
 
 		vm.addBlog = function () {
-			HomeFactory.addNewBlog(vm.blog_object).then(function() {
-				vm.blog = {};
+			HomeFactory.addNewBlog(vm.blog_object)
+			.then(function() {
+				vm.blog_object = {};
 				$state.go('home');
 				HomeFactory.displayBlog();
 			});
 		};
+
+		vm.goHome = function () {
+			$state.go('home');
+			HomeFactory.displayBlog();
+		};
+
 
 	}
 })();

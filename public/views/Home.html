@@ -1,32 +1,25 @@
 
-<div ng-controller="HomeController as vm">
+<div>
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
 				<a class="navbar-brand" href="#">Blog</a>
 			</div>
 
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">
-					<li class="active"><a ui-sref="add">Add a new blog!<span class="sr-only">(current)</span></a></li>
-					
-					<li><a href="#">About</a></li>
-				</ul>
-			</div>	
-		</div>
+			<ul class="nav navbar-nav">
+				<li ><a ui-sref="add">New Blog<span class="sr-only">(current)</span></a></li>	
+				<li><a href="#">About</a></li>
+			</ul>
+		</div>	
 	</nav>
-	<h1>{{vm.title}}</h1>
-	<div ng-repeat="blog in vm.diplayBlog.blog">
-		<h1>Title: {{title}}</h1>
-		<p>Post: {{post}}</p>
+</div>
+<div ng-controller="HomeController as vm">
+	<h1>{{vm.pageTitle}}</h1>
+	<div ng-repeat="blog in vm.listBlog.blog" id="blogPost">
+		<h2>{{blog.blogTitle}}</h2>
+		<p>{{blog.blogTextArea}}</p>
 		<button class="btn btn-danger" ng-click="vm.deleteBlog(blog)">Delete</button>
-		<button class="btn btn-default">Edit</button>
+		<button ui-sref="edit({id:blog.id})" class="btn btn-default">Edit</button>
 	</div>
 </div>
 

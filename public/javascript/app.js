@@ -6,14 +6,14 @@
 	function Config($stateProvider, $urlRouterProvider) {
 		$stateProvider.state('home',{
 			url: '/',
-			templateUrl: 'views/home.html'
+			templateUrl: 'views/Home.html'
 		})
 		.state('add' ,{
 			url: '/add',
 			templateUrl: 'views/addBlog.html'
 		})
 		.state('edit' ,{
-			url: '/edit',
+			url: '/edit/:id',
 			templateUrl: 'views/editBlog.html'
 		});
 

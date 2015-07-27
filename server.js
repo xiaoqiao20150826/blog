@@ -19,14 +19,17 @@ app.set('view options', {
 
 //middleware that allows for us to parse JSON and UTF-8 from the body of an HTTP request
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
 
-var blogExpress = require('./routing/routes.js');
-app.use('/api', blogExpress);
+app.use(bodyParser.json());
+var blogexpress = require('./routing/routes.js');
+
+app.use('/api', blogexpress);
+
 //on homepage load, render the index page
 app.get('/', function(req, res) {
 	res.render('index');
 });
+
 var server = app.listen(port, function() {
 	var host = server.address().address;
 	console.log('Example app listening at http://localhost:' + port);

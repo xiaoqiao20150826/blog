@@ -7,6 +7,17 @@
 
 	function HomeController(HomeFactory, $state) {
 		var vm = this;
-		vm.title = 'Welcome to our Blog!';
+		vm.pageTitle = 'myBlog!';
+
+		vm.listBlog = HomeFactory.listBlog;
+
+		vm.deleteBlog = function (blog) {
+			HomeFactory.deleteBlog(blog).then(function (){
+				$state.go('home');
+				HomeFactory.displayBlog();
+			});
+		};
+
 	}
+
 })();
