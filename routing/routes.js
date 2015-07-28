@@ -1,26 +1,19 @@
 var express =  require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var blog = mongoose.model('blog');
+var Blog = mongoose.model('Blog');
 
 
-function findBlog (id) {
-	for(var i = 0; i < blog_arr.length; i++) {
-		if(blog_arr[i].id.value === id){
-			return i;
-		}
-	}
-	return null;
-}
-
-router.param('id', function (req, res, next, id) {
-	req.blogIndex = findBlog(id);
-	if(req.blogIndex === null) return next("Id does not exist");
-	next();
+router.param('blog', function (req, res, next, id) {
+	Blog.findOne({_id: id}, function(err, blog){
+		if(err) return next(err);
+		req.blog = blog;
+		next();
+	});
 });
 
-router.get('/api', function (req, res, next) {
-	var query = blog.find({dataDeleted: null});
+router.get('/api/', function (req, res, next) {
+	var query = Blog.find({dateDeleted: null});
 	query.exec(function(err, blog) {
 		if(err) return next(err);
 		res.json(blog);
@@ -29,20 +22,20 @@ router.get('/api', function (req, res, next) {
 
 
 router.post('/api/blog', function (req, res, next) {	
-	var createdBlog = new blog(req.body);
+	var createdBlog = new Blog(req.body);
 	createdBlog.save(function(err, blog) {
 		if(err) return next(err);
 		res.send({id: blog._id});
 	});
 });
 
-router.delete('/api/blog/:id', function (req, res) {
-	for ( var i = 0; i < blog_arr.length; i++) {
-		if (blog_arr[i].id.value === req.params.id) {
-			blog_arr.splice(i, 1);
-		}
-	}	
-	res.end();
+router.post('/api/blog/deleteBlog/:blog', function(req, res, next) {
+	Blog.update({_id : req.blog.id}, {dateDeleted: new Date()}, function(err, numberAffected) {
+		if(err) return next(err);
+		if(numberAffected.nModified > 1) res.status(400).send("YOU HAVE DELETED TOO MANY TASKS!!!");
+		else if(numberAffected.nModified !== 1) res.status(400).send("Nothing has been deleted. You have failed.");
+		else res.send("You have deleted the blog.");
+	});
 });
 
 router.put('/api/blog/:id', function (req, res) {

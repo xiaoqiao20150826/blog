@@ -38,9 +38,9 @@
 			return q.promise;
 		}
 
-		function deleteBlog (newBlog) {
+		function deleteBlog (blog) {
 			var q = $q.defer();
-			$http.delete('/api/blog/' + newBlog.id).success(function(res){
+			$http.post('/api/blog/deleteBlog/' + blog._id).success(function(res) {
 				q.resolve();
 			});
 			return q.promise;
