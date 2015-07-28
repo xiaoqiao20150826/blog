@@ -9,15 +9,16 @@
 			<ul class="nav navbar-nav">
 				<li ><a ui-sref="add">New Blog<span class="sr-only">(current)</span></a></li>	
 				<li><a href="#">About</a></li>
-			</ul>
+			</ul> 
 		</div>	
 	</nav>
 </div>
 <div ng-controller="HomeController as vm">
 	<h1>{{vm.pageTitle}}</h1>
-	<div ng-repeat="blog in vm.listBlog.blog" id="blogPost">
+	<div ng-repeat="blog in vm.listBlog.blog" id="blogPost" class="well-container">
 		<h2>{{blog.blogTitle}}</h2>
 		<p>{{blog.blogTextArea}}</p>
+		<img src="https://lh5.googleusercontent.com/-KmyzjFmRT88/AAAAAAAAAAI/AAAAAAAAAAA/-HsXWGy16fc/s32-c/photo.jpg"/>
 		<span>Posted: {{blog.dateTime| date:'medium'}}</span>
 		<div id="buttons">
 			<button class="btn btn-danger" ng-click="vm.deleteBlog(blog)">Delete</button>

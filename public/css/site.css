@@ -37,6 +37,8 @@ h5 {
 h1 {
 	text-align: center;
 	font-family: pacifico;
+	font-size: 50px;
+	color: white;
 }
 
 h2 {
@@ -54,6 +56,7 @@ legend {
 
 body {
 	background-color: white;
+	background-image: url('background.png')
 }
 
 #blogPost {
@@ -61,14 +64,38 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: justify;
-	margin-top: 30px;
+	margin-top: 50px;
 }
 
 #buttons {
-	margin-top: 5px;
+	margin-top: 10px;
 }
 
 span {
 	font-style: italic;
 	font-weight: bold;
+}
+
+img {
+	width: 30px;
+	height: 30px;
+	border-radius: 50px;
+}
+
+.control-label {
+	padding-right: 0px;
+	color: white;
+}
+
+.col-lg-2 {
+	padding-right: 0px;
+	color: white;
+}
+
+.well-container {
+	box-shadow: 10px 10px rgba(0,0,0,0.5);
+	padding: 5px 40px 20px 40px;
+	/*	border-radius: 10px;*/	
+	background-color: rgba(255,255,255,0.8);
+	color: black;
 }

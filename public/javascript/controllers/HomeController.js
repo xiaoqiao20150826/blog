@@ -8,7 +8,6 @@
 	function HomeController(HomeFactory, $state) {
 		var vm = this;
 		vm.pageTitle = 'myBlog!';
-
 		vm.listBlog = HomeFactory.listBlog;
 
 		vm.deleteBlog = function (blog) {
@@ -17,7 +16,6 @@
 				HomeFactory.displayBlog();
 			});
 		};
-
 	}
 
 })();
