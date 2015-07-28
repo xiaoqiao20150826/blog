@@ -18,8 +18,11 @@
 	<div ng-repeat="blog in vm.listBlog.blog" id="blogPost">
 		<h2>{{blog.blogTitle}}</h2>
 		<p>{{blog.blogTextArea}}</p>
-		<button class="btn btn-danger" ng-click="vm.deleteBlog(blog)">Delete</button>
-		<button ui-sref="edit({id:blog.id})" class="btn btn-default">Edit</button>
+		<span>Posted: {{blog.dateTime| date:'medium'}}</span>
+		<div id="buttons">
+			<button class="btn btn-danger" ng-click="vm.deleteBlog(blog)">Delete</button>
+			<button ui-sref="edit({id:blog.id})" class="btn btn-default">Edit</button>
+		</div>
 	</div>
 </div>
 

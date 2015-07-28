@@ -20,15 +20,16 @@ router.get('/api/', function (req, res, next) {
 	});
 });
 
-
+//Post to server.
 router.post('/api/blog', function (req, res, next) {	
 	var createdBlog = new Blog(req.body);
+	createdBlog.dateTime = new Date();
 	createdBlog.save(function(err, blog) {
 		if(err) return next(err);
 		res.send({id: blog._id});
 	});
 });
-
+//Delete blod but remains on the server
 router.post('/api/blog/deleteBlog/:blog', function(req, res, next) {
 	Blog.update({_id : req.blog.id}, {dateDeleted: new Date()}, function(err, numberAffected) {
 		if(err) return next(err);
