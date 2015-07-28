@@ -3,6 +3,12 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var app = express();
 var port = process.env.PORT || 3000;
+//defines mongoose
+var mongoose = require('mongoose');
+//define the models
+require('./models/blog');
+//connect to the server
+mongoose.connect('mongodb://localhost/myBlog');
 
 
 app.set('views', path.join(__dirname, 'views'));
@@ -23,7 +29,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 var blogexpress = require('./routing/routes.js');
 
-app.use('/api', blogexpress);
+app.use('/', blogexpress);
 
 //on homepage load, render the index page
 app.get('/', function(req, res) {

@@ -1,7 +1,8 @@
 var express =  require('express');
 var router = express.Router();
-var Guid = require('guid');
-var blog_arr = [];
+var mongoose = require('mongoose');
+var blog = mongoose.model('blog');
+
 
 function findBlog (id) {
 	for(var i = 0; i < blog_arr.length; i++) {
@@ -18,18 +19,24 @@ router.param('id', function (req, res, next, id) {
 	next();
 });
 
-router.get('/', function (req, res){
-	res.send(blog_arr);
+router.get('/api', function (req, res, next) {
+	var query = blog.find({dataDeleted: null});
+	query.exec(function(err, blog) {
+		if(err) return next(err);
+		res.json(blog);
+	});
 });
 
-router.post('/blog', function (req, res) {	
-	req.body.id = Guid.create();
-	blog_arr.push(req.body);
-	console.log(blog_arr);
-	res.end();
+
+router.post('/api/blog', function (req, res, next) {	
+	var createdBlog = new blog(req.body);
+	createdBlog.save(function(err, blog) {
+		if(err) return next(err);
+		res.send({id: blog._id});
+	});
 });
 
-router.delete('/blog/:id', function (req, res) {
+router.delete('/api/blog/:id', function (req, res) {
 	for ( var i = 0; i < blog_arr.length; i++) {
 		if (blog_arr[i].id.value === req.params.id) {
 			blog_arr.splice(i, 1);
@@ -38,7 +45,7 @@ router.delete('/blog/:id', function (req, res) {
 	res.end();
 });
 
-router.put('/blog/:id', function (req, res) {
+router.put('/api/blog/:id', function (req, res) {
 	var id = req.params.id;
 	var i = req.blogIndex;
 	blog_arr[i].blogTitle = req.body.blogTitle;
@@ -46,7 +53,7 @@ router.put('/blog/:id', function (req, res) {
 	res.send();
 });
 
-router.use('/', function(err, req, res, next) {
+router.use(function(err, req, res, next) {
 	res.status(400).send(err);
 });
 
