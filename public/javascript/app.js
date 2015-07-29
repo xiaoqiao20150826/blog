@@ -15,6 +15,10 @@
 		.state('edit' ,{
 			url: '/edit/:id',
 			templateUrl: 'views/editBlog.html'
+		})
+		.state('about' ,{
+			url: '/about/',
+			templateUrl: 'views/about.html'
 		});
 
 		$urlRouterProvider.otherwise('/');
