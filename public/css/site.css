@@ -129,3 +129,11 @@ p {
 .aboutMeParagraph {
 	width: 60%;
 }
+
+#blogFile {
+	width: auto;
+}
+
+.blogDataEntry {
+	margin-top: 100px;
+}
