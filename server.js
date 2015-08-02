@@ -7,6 +7,7 @@ var port = process.env.PORT || 3000;
 var mongoose = require('mongoose');
 //define the models
 require('./models/Blog');
+require('./models/user');
 //connect to the server
 mongoose.connect('mongodb://localhost/myBlog');
 

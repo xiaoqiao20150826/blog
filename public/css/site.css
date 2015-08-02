@@ -99,7 +99,7 @@ img {
 
 .well-container {
 	box-shadow: 10px 10px rgba(0,0,0,0.5);
-	padding: 5px 40px 20px 40px;	
+	padding: 20px 40px 20px 40px;	
 	background-color: rgba(255,255,255,0.8);
 	color: black;
 }
@@ -137,3 +137,23 @@ p {
 .blogDataEntry {
 	margin-top: 100px;
 }
+
+.signIn {
+	width: 300px;
+	margin-top: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#createAccount {
+	text-align: center;
+	margin-top: 20px;
+}
+
+#addUser {
+	width: 400px;
+	margin-top: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+

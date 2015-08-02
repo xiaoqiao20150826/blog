@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
+var schema = mongoose.Schema;
 var Blog = mongoose.model('Blog');
-
+var user = mongoose.model('user');
 
 router.param('id', function (req, res, next, id) {
 	Blog.findOne({_id: id}, function(err, blog){
@@ -63,5 +64,16 @@ router.put('/api/blog/:id', function (req, res) {
 router.use(function(err, req, res, next) {
 	res.status(400).send(err);
 });
+
+//Post newUser to Database
+router.post('/api/user', function (req, res, next) {	
+	var createUser = new user(req.body);
+	createUser.dateTime = new Date();
+	createUser.save(function(err, user) {
+		if(err) return next(err);
+		// res.send({id: blog._id});
+	});
+});
+
 
 module.exports = router;

@@ -15,7 +15,20 @@
 		o.deleteBlog = deleteBlog;
 		o.editBlogSubmit = editBlogSubmit;
 		o.displayBlog();
+		o.addNewUser = addNewUser;
 		return o;
+
+
+		//add a new User
+		function addNewUser (newUser) {
+			var q = $q.defer();
+			console.log(newUser);
+			$http.post('/api/user', newUser).success(function(res){
+				q.resolve();
+			});
+			return q.promise;
+		}
+
 
 		//display all blogs 
 		function displayBlog (res) {			
@@ -46,6 +59,7 @@
 		function editBlogSubmit (newBlog, id) {
 			var q = $q.defer();
 			$http.put('/api/blog/' + id, newBlog).success(function(data){
+				
 				q.resolve(data);
 			});
 			return q.promise;

@@ -4,8 +4,12 @@
 	.config(Config);
 	Config.$inject = ['$stateProvider', '$urlRouterProvider'];
 	function Config($stateProvider, $urlRouterProvider) {
-		$stateProvider.state('home',{
+		$stateProvider.state('signIn',{
 			url: '/',
+			templateUrl: 'views/signIn.html'
+		})
+		.state('home' ,{
+			url: '/home',
 			templateUrl: 'views/Home.html'
 		})
 		.state('add' ,{
@@ -19,6 +23,10 @@
 		.state('about' ,{
 			url: '/about/',
 			templateUrl: 'views/about.html'
+		})
+		.state('addUser' ,{
+			url: '/addUser' ,
+			templateUrl: 'views/addUser.html'
 		});
 
 		$urlRouterProvider.otherwise('/');
