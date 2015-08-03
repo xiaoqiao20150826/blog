@@ -3,11 +3,12 @@
 	angular.module('app')
 	.controller('addBlogController', addBlogController);
 
-	addBlogController.$inject = ["HomeFactory", "$state"];
+	addBlogController.$inject = ["HomeFactory", "UserFactory", "$state"];
 
-	function addBlogController(HomeFactory, $state) {
+	function addBlogController(HomeFactory, UserFactory , $state) {
 		var vm = this;
 		vm.blog_object = {};
+		vm.userName = UserFactory.status.username;
 
 		vm.addBlog = function () {
 			HomeFactory.addNewBlog(vm.blog_object)
