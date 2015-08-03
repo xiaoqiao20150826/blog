@@ -157,3 +157,15 @@ p {
 	margin-right: auto;
 }
 
+#right {
+	float: right;
+}
+
+#dropdown {
+	padding-right: 15px;
+}
+
+#boxsize {
+	padding-top: 15px;	
+	padding-bottom: 15px;
+}
