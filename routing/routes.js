@@ -65,15 +65,5 @@ router.use(function(err, req, res, next) {
 	res.status(400).send(err);
 });
 
-//Post newUser to Database
-router.post('/api/user', function (req, res, next) {	
-	var createUser = new user(req.body);
-	createUser.dateTime = new Date();
-	createUser.save(function(err, user) {
-		if(err) return next(err);
-		// res.send({id: blog._id});
-	});
-});
-
 
 module.exports = router;

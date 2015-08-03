@@ -5,11 +5,16 @@ var app = express();
 var port = process.env.PORT || 3000;
 //defines mongoose
 var mongoose = require('mongoose');
+var passport = require('passport');
 //define the models
-require('./models/Blog');
+require('./models/blog');
 require('./models/user');
+require('./config/passport');
 //connect to the server
 mongoose.connect('mongodb://localhost/myBlog');
+
+var routes = require('./routing/routes');
+var userRoutes = require('./routing/userRoutes');
 
 
 app.set('views', path.join(__dirname, 'views'));
@@ -26,6 +31,8 @@ app.set('view options', {
 
 //middleware that allows for us to parse JSON and UTF-8 from the body of an HTTP request
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+app.use(passport.initialize());
 
 app.use(bodyParser.json());
 var blogexpress = require('./routing/routes.js');
@@ -37,6 +44,8 @@ app.get('/', function(req, res) {
 	res.render('index');
 });
 
+app.use('/', routes);
+app.use('/', userRoutes);
 var server = app.listen(port, function() {
 	var host = server.address().address;
 	console.log('Example app listening at http://localhost:' + port);

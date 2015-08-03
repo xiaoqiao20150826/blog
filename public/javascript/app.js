@@ -28,6 +28,7 @@
 			url: '/addUser' ,
 			templateUrl: 'views/addUser.html'
 		});
+		
 
 		$urlRouterProvider.otherwise('/');
 	}
