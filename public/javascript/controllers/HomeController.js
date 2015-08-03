@@ -10,6 +10,7 @@
 		vm.pageTitle = 'myBlog!';
 		vm.listBlog = HomeFactory.listBlog;
 		vm.userName = UserFactory.status.username;
+		vm.logOut = UserFactory.logout();
 
 		vm.deleteBlog = function (blog) {
 			HomeFactory.deleteBlog(blog).then(function (){

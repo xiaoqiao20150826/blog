@@ -9,6 +9,7 @@
 		var vm = this;
 		vm.blog_object = {};
 		vm.userName = UserFactory.status.username;
+		vm.logOut = UserFactory.logout();
 
 		vm.addBlog = function () {
 			HomeFactory.addNewBlog(vm.blog_object)
