@@ -26,9 +26,10 @@
 		}
 
 		//add a new blog 
-		function addNewBlog (newBlog) {
+		function addNewBlog (newBlog, user) {
+			console.log(newBlog, user);
 			var q = $q.defer();
-			$http.post('/api/blog', newBlog).success(function(res){
+			$http.post('/api/blog', newBlog, user).success(function(res){
 				q.resolve();
 			});
 			return q.promise;

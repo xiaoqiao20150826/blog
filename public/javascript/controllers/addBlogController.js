@@ -12,7 +12,8 @@
 		vm.logOut = UserFactory.logout();
 
 		vm.addBlog = function () {
-			HomeFactory.addNewBlog(vm.blog_object)
+			console.log(vm.userName);
+			HomeFactory.addNewBlog(vm.blog_object, vm.userName)
 			.then(function() {
 				vm.blog_object = {};
 				$state.go('home');
