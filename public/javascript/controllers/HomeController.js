@@ -12,6 +12,10 @@
 		vm.userName = UserFactory.status.username;
 		vm.logOut = UserFactory.logout;
 
+		if (vm.userName === undefined) {
+			$state.go('signIn');
+		}
+
 		vm.deleteBlog = function (blog) {
 			HomeFactory.deleteBlog(blog).then(function (){
 				$state.go('home');

@@ -11,6 +11,12 @@
 		vm.userName = UserFactory.status.username;
 		vm.logOut = UserFactory.logout();
 
+		console.log(vm.userName);
+		if (vm.userName === undefined) {
+			$state.go('signIn');
+		}
+		
+
 		vm.addBlog = function () {
 			console.log(vm.userName);
 			HomeFactory.addNewBlog(vm.blog_object, vm.userName)
