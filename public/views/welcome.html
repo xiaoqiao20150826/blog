@@ -1,0 +1,134 @@
+<div id="sunglasses">
+	<h1>Philip Lanphar</h1>
+	<h3 class="hcenter">Full Stack JavaScript Developer | UI Designer</h3>
+	<!-- <nav class="navbar navbar-default"> -->
+	<div class="btn-group btn-group-justified">
+		<a href="#about" offset="30" du-smooth-scroll du-scrollspy class="btn btn-default">About Me</a>
+		<a href="#skills" offset="30" du-smooth-scroll du-scrollspy class="btn btn-default">Skills</a>
+		<a href="#blog" offset="30" du-smooth-scroll du-scrollspy class="btn btn-default">Blog</a>
+		<a href="#footer" offset="30" du-smooth-scroll du-scrollspy class="btn btn-default">Work</a>
+	</div>
+	<!-- </nav> -->
+</div>
+
+<div id="about">
+	<div class="container-fluid" id="aboutMe">
+		<div class="row">
+			<div class="col-md-2 picMiddle">
+				<img id="myPic" alt="Philip Lanphar" src="/css/me.jpg" />
+			</div>
+			<div class="col-md-10">
+				<h2>About Me...</h2>
+				<p>
+					I am a full stack JavaScript developer from Phoenix, Arizona. As a junior developer my primary competencies and strengths include AngularJS, MongoDB, Node.js and Express. I am very passionate about my work and strive to challenge myself with every opportunity. I believe in doing what you love most in life and because of that I decided to pursue something that motivates and drives me. Software developing has always been an interest of mine as well as something that I have always wanted to do. My previous work experience comes from a background in the hospitality industry. There I acquired many skills and critical knowledge of how to manage my time effectively, how to communicate and work with others as part of a team and how to provide memorable customer service. My educational background includes a study of the German language at Arizona State University and most recently a bay area full stack JavaScript program at Coder Camps. Some of my hobbies and interests are 80’s music, satirical comedies and German and or Belgian brewed beer.  I love to travel and enjoy meeting new people. I like anything science related and most of all have fun learning new technology. 
+				</p>
+
+
+				<br>
+				<form method="get" action="/css/PhilipLanpharResume.pdf">
+					<button type="submit" class="btn btn-warning navbar-right" download="">Resume</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="skills">
+	<div class="row">
+<!-- 		<div class="chartSize col-md-4" ng-controller="welcomeController">
+			<canvas id="chartMargin" tc-chartjs-doughnut chart-options="options" chart-data="data" auto-legend></canvas>
+		</div> -->
+		<div class="col-md-4">
+			<p>
+				Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
+			</p>
+		</div>
+		<div class="col-md-4">
+			<p>
+				Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
+			</p>
+		</div>
+		<div class="col-md-4">
+			<p>
+				Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
+			</p>
+		</div>
+	</div>
+</div>
+
+
+<div class="container-fluid" id="blog">
+	<div ng-controller="welcomeController as vm" class="row">
+		<div class="col-md-9">
+			<div ng-repeat="blog in vm.listBlog.blog" id="blogPost" class=" well-container">
+				<h2>{{blog.blogTitle}}</h2>
+				<p>{{blog.blogTextArea}}</p>
+				<img src="https://lh5.googleusercontent.com/-KmyzjFmRT88/AAAAAAAAAAI/AAAAAAAAAAA/-HsXWGy16fc/s32-c/photo.jpg"/>
+				<span>Posted: {{blog.dateTime| date:'medium'}}</span>
+			</div>
+		</div>
+
+		<div class="col-md-3">
+			<div id="floatRight">
+				<a class="twitter-timeline" href="https://twitter.com/PhilipLanphar" data-widget-id="641687473907593216">Tweets by @PhilipLanphar</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div id="work">
+	<div class="container-fluid hcenter fifty">
+		<div class="row widthSmall">
+			<div class="col-md-4 hover12 pointer hcenter">
+				<figure><h6><span><a href="whereaboutapp.herokuapp.com/">Where@bout</a></span></h6><img alt="Bootstrap Image Preview" class="hoverSize hcenter" src="/css/Where%20bout.png"/></figure>
+			</div>
+			<div class="col-md-4 hover12 pointer hcenter">
+				<figure><h6><span>Project 2</span></h6><img alt="Bootstrap Image Preview" class="hoverSize hcenter" src="/css/Where%20bout.png"/></figure>
+			</div>
+			<div class="col-md-4 hover12 pointer hcenter">
+				<figure><h6><span>Project 3</span></h6><img alt="Bootstrap Image Preview" class="hoverSize hcenter" src="/css/Where%20bout.png"/></figure>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="footer">
+	<div class="container-fluid info hcenter">
+		<div class="row">
+			<div class="col-md-4">
+			</div>
+			<div class="col-md-2">
+				<address>
+					<strong>Philip Lanphar</strong><br /> 5400 E. Via Los Caballos<br /> Paradise Valley, AZ 85253<br /> <br /> <abbr title="Phone">P:</abbr> (480) 703-2093<br /> <abbr title="E-mail">E:</abbr> philip.lanphar@gmail.com
+				</address>
+				<div id="socialMedia">
+					<a href="https://www.linkedin.com/pub/philip-lanphar/30/136/684"><img class="icon pointer" src="/css/linkedin.png"> Linkedin</a>
+					<br />
+					<a href="https://www.github.com/pjl1983"><img class="icon pointer" src="/css/github.png"> Github</a>
+					<br />
+					<a href="https://www.twitter.com/PhilipLanphar"><img class="icon pointer" src="/css/twitter.png"> Twitter</a>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<blockquote>
+					<p>
+						Find joy in everything you choose to do. Every job, relationship, home... it's your responsibility to love it, or change it.
+					</p> <small>Chuck Palahniuk </small>
+				</blockquote>
+			</div>
+			<div class="col-md-4">
+			</div>
+		</div>
+	</div>
+	<ul class="breadcrumb">
+		<li><a href="#sunglasses" offset="30" du-smooth-scroll du-scrollspy>Top</a></li>
+		<li><a href="#about" offset="30" du-smooth-scroll du-scrollspy>About Me</a></li>
+		<li><a href="#skills" offset="30" du-smooth-scroll du-scrollspy>Skills</a></li>
+		<li><a href="#blog" offset="30" du-smooth-scroll du-scrollspy>Blog</a></li>
+		<li><a href="#Work" offset="30" du-smooth-scroll du-scrollspy>Work</a></li>
+	</ul>
+</div>

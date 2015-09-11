@@ -1,0 +1,83 @@
+<div ng-controller="HomeController as vm">
+	<div>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<!-- Navbar -->
+				<div class="navbar-header">
+					<a class="navbar-brand" ui-sref="home"><span class="glyphicon glyphicon-home"></span> Home</a>
+				</div>
+
+				<ul class="nav navbar-nav">
+					<li ><a ui-sref="add">New Blog<span class="sr-only">(current)</span></a></li>	
+				</ul>
+				<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+
+				<ul class="nav navbar-right" id="right">
+					<li class="dropdown nav navbar-right" id="dropdown">
+						<a href="#" data-toggle="dropdown" id="boxsize" class="dropdown-toggle">{{vm.userName}} <strong class="caret"></strong></a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#" class="glyphicon glyphicon-cog"> Settings</a>
+							</li>
+							<li>
+								<a ui-sref="about" class="glyphicon glyphicon-user"> About</a>
+							</li>
+							<li>
+								<a class="glyphicon glyphicon-question-sign"> Help</a>
+							</li>
+							<li class="divider">
+							</li>
+							<li>
+								<a ui-sref="signIn" ng-click="vm.logOut()" class="glyphicon glyphicon-log-out"> Logout</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!-- End Nabar -->
+			</div>	
+		</nav>
+	</div>
+
+	<h1>About me...</h1>
+	<form class="form-horizontal" ng-submit="vm.addBlog()">
+		<div id="aboutMeContainer">
+			<img id="aboutMe" src="css/Philip.jpg"/>
+		</div>
+		<p class="aboutMeParagraph">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id facilisis justo. Vivamus a ligula vulputate, lacinia tellus sed, bibendum diam. Quisque suscipit sapien quis sem volutpat pretium. Suspendisse ac consectetur lorem. Sed pharetra efficitur cursus. Praesent dictum vestibulum urna, at rutrum diam cursus ac. Ut sit amet turpis eget lectus ullamcorper eleifend non sed felis. Donec at nibh et neque posuere tincidunt. Nunc lacinia lorem consequat maximus consequat. Quisque molestie convallis erat, eget ullamcorper sapien ullamcorper eget. Curabitur interdum nisi id magna placerat ultrices. Sed dignissim sem et pulvinar malesuada. Nulla ac blandit erat. Ut vulputate felis vitae turpis commodo, eu accumsan magna dapibus. Aliquam tempor enim vel rhoncus hendrerit.
+		</p>
+		<p class="aboutMeParagraph">
+			Phasellus volutpat metus eu turpis commodo interdum. Ut velit ante, congue ut ultrices at, tempor sed metus. Suspendisse imperdiet a felis et cursus. Aliquam ac aliquam arcu. Morbi elementum magna et ipsum dapibus, sit amet vulputate nisl eleifend. Maecenas ut sollicitudin felis. Vivamus est ante, rhoncus vel fringilla id, gravida eu augue. Quisque fringilla, ante vitae eleifend efficitur, massa lectus porta erat, ac placerat enim diam vel massa.
+		</p>
+		<p class="aboutMeParagraph">
+			Fusce ultricies cursus nisl, ac ullamcorper quam condimentum in. Ut a mattis nulla. Vestibulum laoreet lacinia nisi at finibus. Quisque suscipit nisi in ante cursus cursus. Cras ac nulla a neque tristique condimentum at nec nisi. Proin eu nibh non mi ullamcorper dapibus id et diam. Donec a nunc porttitor, hendrerit velit in, facilisis lacus. Vivamus nunc nibh, posuere quis sapien et, rutrum euismod ante. Etiam justo eros, euismod a diam sit amet, finibus blandit erat. Nulla feugiat finibus quam, eget pharetra felis varius vitae. Aenean nec nisi sed ex suscipit mattis eget et dolor. Proin porta eget enim a congue. Ut consequat congue arcu, non tempor magna venenatis sit amet.
+		</p>
+		<p class="aboutMeParagraph">
+			Aliquam diam lorem, pharetra eu felis eu, molestie aliquet nibh. Sed a scelerisque mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec gravida vestibulum tellus eget volutpat. Nullam sed egestas urna. Quisque mollis cursus leo nec aliquam. Phasellus id rhoncus metus, eget ultrices sem. Nam in libero sollicitudin lorem ultricies imperdiet. Fusce placerat massa feugiat, fermentum ante id, euismod lacus. Etiam nibh enim, venenatis viverra nibh sed, ullamcorper maximus magna. Pellentesque fermentum elementum libero, a rutrum tellus viverra vitae. Mauris nec nulla eros. In hac habitasse platea dictumst.
+		</p>
+		<p class="aboutMeParagraph">
+			Nunc eu orci ultrices, finibus justo in, viverra eros. Duis porttitor sodales turpis, accumsan imperdiet velit volutpat vitae. Vivamus sagittis odio odio, at bibendum eros pretium id. Phasellus sed convallis ex, eu interdum nibh. Duis lobortis augue turpis, eu pellentesque dui porta ac. Nullam a eros id odio lobortis iaculis. Fusce ut consequat velit. Integer ullamcorper, ante a ultricies lacinia, tortor elit aliquet sem, non aliquet risus neque sed enim. Duis sed neque ultricies, pulvinar erat quis, placerat enim. Praesent molestie nulla accumsan nisi euismod porta. Mauris viverra sollicitudin nibh, laoreet rutrum justo ultrices ac. Aenean cursus eget neque vel vehicula. In in tincidunt purus. Nulla malesuada nulla libero, pellentesque sollicitudin nibh tincidunt sed. Nulla a convallis tellus. Maecenas sit amet interdum magna.
+		</p>
+		<p class="aboutMeParagraph">
+			In auctor quam ac est placerat, quis vestibulum diam dignissim. Phasellus consequat, erat porttitor blandit aliquam, sem augue viverra metus, nec mattis lectus tortor ac dui. Aenean nec eleifend elit. Nulla sodales euismod diam, sed luctus ante cursus in. Donec consequat molestie odio, nec lacinia justo accumsan id. Donec ut laoreet sem, eu maximus ante. Morbi accumsan nunc quis mi eleifend, id semper lorem consequat. Aenean sed urna id ligula congue dapibus ac eget felis.
+		</p>
+		<p class="aboutMeParagraph">
+			Cras non feugiat augue, quis rhoncus eros. Aliquam sagittis diam ac turpis varius, at imperdiet turpis dignissim. Fusce a luctus purus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc vehicula rutrum condimentum. Vivamus purus purus, porta in neque finibus, maximus fringilla tellus. Cras et urna augue. Praesent bibendum tincidunt turpis, et vehicula nibh sagittis sed.
+		</p>
+		<p class="aboutMeParagraph">
+			Aliquam malesuada scelerisque nisl, ac dapibus nisi luctus a. Vivamus interdum dictum neque, eu aliquam orci commodo sed. Nam malesuada magna nisi, sit amet consectetur ante porttitor quis. Proin lacinia nunc vitae nulla tempus, quis vulputate sapien volutpat. Phasellus quis fringilla diam, in pellentesque odio. Nulla non nisl odio. Sed faucibus semper gravida. Curabitur bibendum ante lectus, id semper magna elementum eu. Aliquam porta at lacus eu rutrum. Nulla blandit massa eget tellus feugiat ultrices. Etiam efficitur ultrices suscipit. Cras varius tincidunt nisi in rutrum. Aliquam non placerat enim, vitae suscipit lectus. Nunc vestibulum interdum erat sed convallis. Morbi gravida nibh vel feugiat finibus. Mauris molestie, metus at hendrerit fermentum, ligula elit aliquet risus, nec bibendum elit enim cursus velit.
+		</p>
+		<p class="aboutMeParagraph">
+			Mauris consectetur rhoncus lectus, nec maximus magna rhoncus id. Aliquam et hendrerit mauris. Phasellus pharetra vehicula nulla, sed placerat justo semper et. Proin enim dui, mollis vel varius eu, bibendum sit amet est. Phasellus aliquet sem nibh, at aliquet erat tristique eu. Vivamus velit turpis, vehicula vitae blandit sed, porttitor non quam. Proin viverra tellus vel elit tincidunt tempus. Nulla facilisi. Cras eu volutpat purus, in blandit ligula. Quisque congue scelerisque blandit. Integer eu libero elit. Sed massa odio, tempor non leo non, sagittis varius nisi. Aenean egestas tempus ligula id ultricies.
+		</p>
+		<p class="aboutMeParagraph">
+			Duis ac quam vitae diam consectetur rhoncus. Vestibulum id eros et arcu vestibulum vestibulum interdum eget mauris. Mauris erat magna, porta ut turpis a, lacinia tristique est. Ut vitae diam mollis, facilisis ligula non, rutrum urna. Praesent fringilla nibh viverra pulvinar gravida. Vestibulum tortor nibh, hendrerit vel risus nec, ultrices fringilla diam. Nulla varius sapien a mauris efficitur pellentesque maximus nec ante. Nam a gravida leo. Nulla facilisi.
+		</P>
+
+	</form>
+</div>
