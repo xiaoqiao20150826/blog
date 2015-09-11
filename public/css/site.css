@@ -1,3 +1,9 @@
+.hcenter {
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
 #chooseFile {
 	width: 15%;
 	margin-left: auto;
@@ -7,15 +13,17 @@
 #blogTitle {
 	margin-left: auto;
 	margin-right: auto;
-	width: 80%;
 	float: left;
+}
+
+.pointer {
+	cursor: pointer;
 }
 
 #blogTextArea {
 	margin-left: auto;
 	margin-right: auto;
 	height: 400px;
-	width: 80%;
 	margin-bottom: 20px;
 	color: black;
 	background-image: white;
@@ -36,12 +44,14 @@ h5 {
 
 h1 {
 	text-align: center;
-	font-family: pacifico;
-	font-size: 50px;
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 85px;
 	color: white;
+	margin-top: 25vh;
 }
 
-h2 {
+h3 {
+	color: white;
 }
 
 legend {
@@ -54,22 +64,16 @@ legend {
 	color: white;
 }
 
-body {
-	background-color: white;
-	background-image: url('background.png');
-	margin-bottom: 100px;
-}
-
 #blogPost {
-	width: 50%;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: justify;
 	margin-top: 50px;
 }
 
-#buttons {
-	margin-top: 20px;
+.buttons {
+	float: right;
 }
 
 span {
@@ -77,9 +81,7 @@ span {
 	font-weight: bold;
 }
 
-img {
-	border-radius: 100%;
-}
+
 
 #icon {
 	width: 30px;
@@ -113,12 +115,6 @@ p {
 	padding: 0px;
 }
 
-#aboutMe {
-	width: 125px;
-	height: 125px;
-	margin-left: auto;
-	margin-right: auto;
-}
 
 #aboutMeContainer {
 	text-align: center;
@@ -127,7 +123,7 @@ p {
 }
 
 .aboutMeParagraph {
-	width: 60%;
+	width: 80%;
 }
 
 #blogFile {
@@ -140,7 +136,7 @@ p {
 
 .signIn {
 	width: 300px;
-	margin-top: 300px;
+	margin-top: 50px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -168,4 +164,210 @@ p {
 #boxsize {
 	padding-top: 15px;	
 	padding-bottom: 15px;
+}
+
+#aboutMe {
+	width: 60%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.chartSize {
+	width: 300px;
+	height: 300px;
+}
+
+#chartMargin {
+	margin-top: 20px;
+}
+
+.tc-chart-js-legend {
+	list-style-type: none;
+	padding-left: 0px;
+	margin-left: 75px;
+}
+.tc-chart-js-legend li {
+	display: block;
+	float: left;
+	clear:both;
+	padding:10px;
+}
+.tc-chart-js-legend li span {
+	width:25px;
+	height:25px;
+	display:block;
+	float:left;
+	margin-right:10px;
+}
+
+.btn-group-justified {
+	bottom: 0px;
+	position: absolute;
+}
+
+#myPic {
+	border-radius: 100%;
+	height: 50%;
+	width: 50%;
+	margin-top: 25px;
+}
+
+.picMiddle {
+	text-align: center;
+}
+
+
+#about {
+	height: auto;
+	width: 100%;
+	margin-top: 10vh;
+}
+
+#sunglasses {
+	background-color: white;
+	background-image: url('bob-van-aubel-ray-bans.jpg');
+	background-size: cover;
+	overflow: hidden;
+	background-position: top;
+	background-repeat: no-repeat;
+	height: 96vh;
+}
+
+#skills {
+	background-color: #ff7518;
+	height: auto;
+	width: 100%;
+	padding: 20px;
+}
+
+#blog {
+	background-color: #333;
+	background-image: url('www.madebyvadim.com.jpg');
+	background-size: cover;
+	overflow: hidden;
+	background-position: top;
+	background-repeat: no-repeat;
+	height: auto;
+}
+
+#footer {
+	height: auto;
+	background-color: black;
+	color: white;
+}
+
+.info {
+	width: auto;
+	padding-top: 25px;
+}
+
+#floatRight {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+#work {
+	height: auto;
+	background-color: #333;
+}
+
+/* Opacity #2 */
+.hover12 figure {
+	background: #ff7518;
+}
+.hover12 figure img {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .0s ease-in-out;
+}
+.hover12 figure:hover img {
+	opacity: .5;
+}
+
+figure {
+/*	width: 300px;
+height: 200px;*/
+margin-top: 20px;
+margin-bottom: 20px;
+margin-left: auto;
+margin-right: auto;
+padding: 0;
+background: #ff7518;
+overflow: hidden;
+}
+
+figure:hover+span {
+	bottom: -36px;
+	opacity: 1;
+}
+
+.hoverSize {
+/*	width: 300px;
+height: 200px;*/
+width: 100%;
+height: auto;
+}
+
+.fifty {
+	width: auto;
+}
+
+.widthSmall {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h6 { 
+	position: absolute;
+}
+
+h6 span { 
+	color: white; 
+	font: bold 24px/45px Helvetica, Sans-Serif; 
+	letter-spacing: -1px;  
+	background: rgb(0, 0, 0); /* fallback color */
+	background: rgba(0, 0, 0, 0.7);
+	padding: 10px; 
+}
+
+dl {
+	text-align: left;
+}
+
+.icon {
+	height: 40px;
+	width: 40px;
+	margin: 5px 10px 5px 0px;;
+}
+
+#socialMedia {
+	text-align: left;
+}
+
+address {
+	text-align: left;
+}
+
+.breadcrumb {
+	margin-bottom: 0px;
+	background-color: black;
+}
+
+.background{ 
+	background-color: #333;
+	background-image: url('background.png');
+	background-size: cover;
+	overflow: hidden;
+	background-position: top;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+
+.width80 {
+	width: 80vw;
+}
+
+.pageTitle {
+	margin-top: 5vh;
 }

@@ -1,6 +1,6 @@
-<div ng-controller="HomeController as vm">
+<div ng-controller="HomeController as vm" class="background">
 	<div>
-		<nav class="navbar navbar-inverse">
+		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<!-- Navbar -->
 				<div class="navbar-header">
@@ -21,17 +21,7 @@
 					<li class="dropdown nav navbar-right" id="dropdown">
 						<a href="#" data-toggle="dropdown" id="boxsize" class="dropdown-toggle">Welcome {{vm.userName}} <strong class="caret"></strong></a>
 						<ul class="dropdown-menu">
-							<li>
-								<a href="#" class="glyphicon glyphicon-cog"> Settings</a>
-							</li>
-							<li>
-								<a ui-sref="about" class="glyphicon glyphicon-user"> About</a>
-							</li>
-							<li>
-								<a class="glyphicon glyphicon-question-sign"> Help</a>
-							</li>
-							<li class="divider">
-							</li>
+
 							<li>
 								<a ui-sref="signIn" ng-click="vm.logOut()" class="glyphicon glyphicon-log-out"> Logout</a>
 							</li>
@@ -42,14 +32,14 @@
 			</div>	
 		</nav>
 	</div>
-	<div>
-		<h1>{{vm.pageTitle}}</h1>
+	<div class="width80 hcenter">
+		<h1 class="pageTitle">{{vm.pageTitle}}</h1>
 		<div ng-repeat="blog in vm.listBlog.blog" id="blogPost" class="well-container">
 			<h2>{{blog.blogTitle}}</h2>
 			<p>{{blog.blogTextArea}}</p>
 			<img src="https://lh5.googleusercontent.com/-KmyzjFmRT88/AAAAAAAAAAI/AAAAAAAAAAA/-HsXWGy16fc/s32-c/photo.jpg"/>
 			<span>Posted: {{blog.dateTime| date:'medium'}}</span>
-			<div id="buttons">
+			<div class="buttons">
 				<button class="btn btn-danger" ng-click="vm.deleteBlog(blog)">Delete</button>
 				<button ui-sref="edit({id:blog._id})" class="btn btn-default">Edit</button>
 			</div>

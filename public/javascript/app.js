@@ -1,12 +1,12 @@
 (function() {
 	'use strict';
-	angular.module('app', ['ui.router'])
+	angular.module('app', ['ui.router', 'tc.chartjs', 'duScroll'])
 	.config(Config);
 	Config.$inject = ['$stateProvider', '$urlRouterProvider'];
 	function Config($stateProvider, $urlRouterProvider) {
-		$stateProvider.state('signIn',{
+		$stateProvider.state('welcome',{
 			url: '/',
-			templateUrl: 'views/signIn.html'
+			templateUrl: 'views/welcome.html'
 		})
 		.state('home' ,{
 			url: '/home',
@@ -27,8 +27,12 @@
 		.state('addUser' ,{
 			url: '/addUser' ,
 			templateUrl: 'views/addUser.html'
+		})
+		.state('signIn' ,{
+			url: '/signIn' ,
+			templateUrl: 'views/signIn.html'
 		});
-		
+
 
 		$urlRouterProvider.otherwise('/');
 	}
