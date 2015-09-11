@@ -11,7 +11,7 @@ require('./models/blog');
 require('./models/user');
 require('./config/passport');
 //connect to the server
-mongoose.connect('mongodb://philip:negraModelo>@ds041571.mongolab.com:41571/philiplanphar');
+mongoose.connect('mongodb://philip:KraftWerk83@ds041581.mongolab.com:41581/philip');
 
 var routes = require('./routing/routes');
 var userRoutes = require('./routing/userRoutes');
