@@ -247,7 +247,7 @@ p {
 	overflow: hidden;
 	background-position: top;
 	background-repeat: no-repeat;
-	height: auto;
+	height: 100vh;
 }
 
 #footer {
