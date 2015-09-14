@@ -167,7 +167,7 @@ p {
 }
 
 #aboutMe {
-	width: 70%;
+	width: 80%;
 	height: auto;
 	margin-bottom: 20px;
 }
@@ -207,9 +207,9 @@ p {
 
 #myPic {
 	border-radius: 100%;
-	height: 50%;
-	width: 50%;
-	margin-top: 25px;
+	height: 200px;
+	width: 200px;
+	margin-top: 75px;
 }
 
 .picMiddle {
@@ -221,6 +221,7 @@ p {
 	height: auto;
 	width: 100%;
 	margin-top: 10vh;
+	margin-bottom: 10vh;
 }
 
 #sunglasses {
@@ -237,7 +238,7 @@ p {
 	background-color: #ff7518;
 	height: auto;
 	width: 100%;
-	padding: 20px;
+	padding: 20px 20px 40px 20px;
 }
 
 #blog {
@@ -385,9 +386,10 @@ address {
 
 .progress .progress-bar {
 	font-size: 20px;
-	line-height: 25px;
+	line-height: 28px;
 	text-align: left;
 	padding-left: 10px;
+	font-weight: normal;
 }
 
 .percentage {
@@ -401,5 +403,17 @@ address {
 	height: 30px;
 	line-height: 25px;
 	padding-left: 5px;
+}
 
+.floatRight {
+	float: right;
+}
+
+.textRight {
+	padding-right: 5px;
+	padding-left: 0px;
+}
+
+h3 {
+	font-size: 45px;
 }
