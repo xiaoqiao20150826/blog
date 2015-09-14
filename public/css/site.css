@@ -375,3 +375,31 @@ address {
 .buttonHeight {
 	height: 52px;
 }
+
+.progress {
+	height: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #FF7518;
+}
+
+.progress .progress-bar {
+	font-size: 20px;
+	line-height: 25px;
+	text-align: left;
+	padding-left: 10px;
+}
+
+.percentage {
+	color: rgb(255, 255, 255);
+	display: block;
+	float: left;
+	font-family: 'Source Sans Pro', Calibri, Candara, Arial, sans-serif;
+	font-size: 20px;
+	font-style: italic;
+	font-weight: bold;
+	height: 30px;
+	line-height: 25px;
+	padding-left: 5px;
+
+}
