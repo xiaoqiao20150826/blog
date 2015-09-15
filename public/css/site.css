@@ -387,7 +387,6 @@ address {
 .progress .progress-bar {
 	font-size: 20px;
 	line-height: 28px;
-	text-align: left;
 	padding-left: 10px;
 	font-weight: normal;
 }
@@ -416,4 +415,13 @@ address {
 
 h3 {
 	font-size: 45px;
+}
+
+.textRight {
+	text-align: right;
+	margin-right: 5px;
+}
+
+.textLeft {
+	text-align: left;
 }
